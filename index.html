@@ -9,43 +9,68 @@
 </head>
 <body>
     <div class="container">
-        <div id ="question-box" class="hide">
+        <div id="start-screen">
+            
+            <h1>Are you ready for a Code Quiz!?</h1>
+            <p>Click below to start</p>
+            <button class="btn btn-primary btn-lg start-btn">Start</button>
+        </div>
+        <div id ="question1" class="hide">
             <div class="question">What does HTML do?</div>
             <div id="answers" class="btn-grid">
                 <button class="btn btn-primary btn-lg btn1">Controls your computer</button>
-                <button class="btn btn-primary btn-lg btn2">Helps you out</button>
+                <button class="btn btn-primary btn-lg btn2">Styles content</button>
                 <button class="btn btn-primary btn-lg btn3 correct">Displays content</button>
-                <button class="btn btn-primary btn-lg btn4">Makes things work</button>
+                <button class="btn btn-primary btn-lg btn4">Gives functionality</button>
             </div>
         </div>
-        <!-- <div id ="question-box" class="hide">
-            <div class="question">What does HTML do?</div>
-            <button class="btn btn-primary btn1">Controls your computer</button>
-            <button class="btn btn-primary btn2">Helps you out</button>
-            <button class="btn btn-primary btn3 correct">Displays content</button>
-            <button class="btn btn-primary btn4">Makes things work</button>
+        <div id ="question2" class="hide">
+            <div class="question">What does CSS do?</div>
+            <div id="answers" class="btn-grid">
+                <button class="btn btn-primary btn1">Controls your computer</button>
+                <button class="btn btn-primary btn2 correct">Styles content</button>
+                <button class="btn btn-primary btn3">Displays content</button>
+                <button class="btn btn-primary btn4">Gives functionality</button>
+            </div>
         </div>
-        <div id ="question-box" class="hide">
-            <div class="question">What does HTML do?</div>
-            <button class="btn btn-primary btn1">Controls your computer</button>
-            <button class="btn btn-primary btn2">Helps you out</button>
-            <button class="btn btn-primary btn3 correct">Displays content</button>
-            <button class="btn btn-primary btn4">Makes things work</button>
+        <div id ="question3" class="hide">
+            <div class="question">What does JavaScript do?</div>
+            <div id="answers" class="btn-grid">
+                <button class="btn btn-primary btn1">Controls your computer</button>
+                <button class="btn btn-primary btn2">Styles content</button>
+                <button class="btn btn-primary btn3">Displays content</button>
+                <button class="btn btn-primary btn4 correct">Gives functionality</button>
+            </div>
         </div>
-        <div id ="question-box" class="hide">
-            <div class="question">What does HTML do?</div>
-            <button class="btn btn-primary btn1">Controls your computer</button>
-            <button class="btn btn-primary btn2">Helps you out</button>
-            <button class="btn btn-primary btn3 correct">Displays content</button>
-            <button class="btn btn-primary btn4">Makes things work</button>
+        <div id ="question4" class="hide">
+            <div class="question">Which of these is a function?</div>
+            <div id="answers" class="btn-grid">
+                <button class="btn btn-primary btn1">.container</button>
+                <button class="btn btn-primary btn2">#box</button>
+                <button class="btn btn-primary btn3 correct">reset()</button>
+                <button class="btn btn-primary btn4">Hakuna Matata</button>
+            </div>
         </div>
-        <div id ="question-box" class="hide">
-            <div class="question">What does HTML do?</div>
-            <button class="btn btn-primary btn1">Controls your computer</button>
-            <button class="btn btn-primary btn2">Helps you out</button>
-            <button class="btn btn-primary btn3 correct">Displays content</button>
-            <button class="btn btn-primary btn4">Makes things work</button>
-        </div> -->
+        <div id ="question5" class="hide">
+            <div class="question">Which of these is proper syntax for CSS?</div>
+            <div id="answers" class="btn-grid">
+                <button class="btn btn-primary btn1 correct">background-color: red;</button>
+                <button class="btn btn-primary btn2">background: color "red";</button>
+                <button class="btn btn-primary btn3">background-color; red:</button>
+                <button class="btn btn-primary btn4">background; color "red":</button>
+            </div>
+        </div>
+        <div id="results" class="hide">
+            <h1>Congratulations!!!</h1>
+            <ul>
+                <li id="score">
+                    Score:
+                </li>
+                <li id="high-score">
+                    High-score:
+                </li>
+            </ul>
+        </div>
     </div>
 
     
