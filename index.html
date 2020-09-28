@@ -9,8 +9,8 @@
 </head>
 <body>
     <div class="container">
+        <p id="timer"></p>
         <div id="start-screen">
-            
             <h1>Are you ready for a Code Quiz!?</h1>
             <p>Click below to start</p>
             <button class="btn btn-primary btn-lg start-btn">Start</button>
@@ -62,14 +62,14 @@
         </div>
         <div id="results" class="hide">
             <h1>Congratulations!!!</h1>
-            <ul>
-                <li id="score">
-                    Score:
-                </li>
-                <li id="high-score">
-                    High-score:
-                </li>
-            </ul>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Initials" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-primary btn-outline-secondary submit" type="button" id="button-addon2">Submit</button>
+                </div>
+            </div>
+            <h2>Initials: <span class="input-username"></span></h2>
+            <h2>Score: <span class="input-score"></span></h2>
         </div>
     </div>
 
