@@ -1,3 +1,4 @@
+// Global constant variables
 const startButton = document.querySelector(".start-btn")
 const startScreen = document.querySelector("#start-screen")
 const question1 = document.querySelector("#question1")
@@ -12,16 +13,17 @@ const timer = document.querySelector("#timer")
 var doneQuiz = false
 var score = 0
 var timeLeft = 60
-var timeInterval = setInterval(startCountdown, 1000)
 
 function startCountdown() {
+    var timeInterval = setInterval(startCountdown, 1000)
     timer.textContent = timeLeft
     timeLeft--
-
-    if (timeLeft <= 0) {
+    
+    if (timeLeft = 0) {
         clearInterval(timeInterval)
-        questions[0, 1, 2, 3, 4].classList.add("hide")
-        console.log(questions)
+        for ( var i=0; i<5; i++) {
+            questions[i].classList.add("hide")
+        }
         results.classList.remove("hide")
         timer.classList.add("hide")
     }
@@ -130,12 +132,16 @@ document.querySelector(".submit").addEventListener("click", submitScore)
 
 function submitScore() {
     var userName = document.querySelector(".form-control").value
-
-    localStorage.setItem("username", userName)
-    localStorage.setItem("score", score)
-
-    var inputEmail = localStorage.getItem("username")
-    var inputScore = localStorage.getItem("score")
-    document.querySelector(".input-username").textContent = inputEmail
+    var scoreList = JSON.parse(localStorage.scoreList)
+    var userList = JSON.parse(localStorage.userList)
+    scoreList.push(score)
+    userList.push(userName)
+    console.log(scoreList, userList)
+    localStorage.scoreList = JSON.stringify(scoreList)
+    localStorage.userList = JSON.stringify(userList)
+    var inputName = localStorage.userList
+    var inputScore = localStorage.scoreList
+   
+    document.querySelector(".input-username").textContent = inputName
     document.querySelector(".input-score").textContent = inputScore
 }
