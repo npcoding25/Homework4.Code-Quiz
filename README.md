@@ -17,7 +17,7 @@ When you click on one of the answer buttons it will bring you to the next questi
 
 ### Challenges
 
-The toughest part about the code quiz for me was making the timer function properly and saving multiple scores.
+The toughest part about the code quiz for me was making the timer function properly and saving multiple scores. I realized after i had written most of my code in javascript that i could have made an array of questions and used that to make a loop which would have shortened my code considerably. I had already spent a lot of time figuring it out this way so I did not want to change it.
 
 ### Screenshots
 

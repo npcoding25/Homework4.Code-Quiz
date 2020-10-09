@@ -13,27 +13,26 @@ const timer = document.querySelector("#timer")
 // Global variables
 var doneQuiz = false
 var score = 0
-var timeLeft = 60
+var timeLeft = 30
 
 // Function that will start timer
 function startCountdown() {
-    var timeInterval = setInterval(startCountdown, 1000)
     timer.textContent = timeLeft
     timeLeft--
     
     // If there is no time left the timer disappears and you will see the final page
-    if (timeLeft = 0) {
-        clearInterval(timeInterval)
+    if (timeLeft <= 0) {
+        clearInterval(setInterval)
         for ( var i=0; i<5; i++) {
             questions[i].classList.add("hide")
         }
         results.classList.remove("hide")
         timer.classList.add("hide")
     }
-
+    
     // If on the final page the timer will disappear
     if (doneQuiz) {
-        clearInterval(timeInterval)
+        clearInterval(setInterval)
         timer.classList.add("hide")
     }
 }
@@ -43,8 +42,8 @@ startButton.addEventListener("click", startQuiz)
 
 // Function that sets score, activates timer and switches to next question
 function startQuiz() {
+    var timeInterval = setInterval(startCountdown, 1000)
     score = 0
-    startCountdown()
     startScreen.classList.add("hide")
     question1.classList.remove("hide")
 }
@@ -155,17 +154,14 @@ document.querySelector(".submit").addEventListener("click", submitScore)
 // When you click submit it will store your score and initials and display them on the screen
 function submitScore() {
     var userName = document.querySelector(".form-control").value
-    var scoreList = JSON.parse(localStorage.scoreList)
-    var userList = JSON.parse(localStorage.userList)
+    var scoreList = JSON.parse(localStorage.score || "[]")
+    var userList = JSON.parse(localStorage.userName || "[]")
     scoreList.push(score)
     userList.push(userName)
-    console.log(scoreList, userList)
-    localStorage.scoreList = JSON.stringify(scoreList)
-    localStorage.userList = JSON.stringify(userList)
-    var inputName = localStorage.userList
-    var inputScore = localStorage.scoreList
-   
+    localStorage.score = JSON.stringify( scoreList )
+    localStorage.userName = JSON.stringify( userList )
+  
     // This chooses where to place the info gathered
-    document.querySelector(".input-username").textContent = inputName
-    document.querySelector(".input-score").textContent = inputScore
+    document.querySelector(".input-username").textContent = userName
+    document.querySelector(".input-score").textContent = score
 }
