@@ -21,7 +21,7 @@ The toughest part about the code quiz for me was making the timer function prope
 
 ### Screenshots
 
-![image](https://user-images.githubusercontent.com/69565347/94497066-ec922180-01aa-11eb-9f62-acf9e6568168.png)
+![image](https://user-images.githubusercontent.com/69565347/95687321-b6e03600-0bb7-11eb-9aff-6320e9f4ab87.png)
 
 ![image](https://user-images.githubusercontent.com/69565347/94497155-2fec9000-01ab-11eb-8b05-1d2e0c0c07a1.png)
 
